@@ -16,11 +16,11 @@ Create a Keras sequential model to create an LSTM model for predicting sentiment
 
 Here is the architecture:
 
-	1. Embedding layer with 64 hidden states (maps words to a vector of length 8, 16, or 32)
+1. Embedding layer with 64 hidden states (maps words to a vector of length 8, 16, or 32)
 
-	2. An LSTM layer ( it can have either 16, 32, 64, or 128 hidden states)
+2. An LSTM layer ( it can have either 16, 32, 64, or 128 hidden states)
 
-	3. Dense layer with sigmoid output (0 = good sentiment, and 1 = bad sentiment)
+3. Dense layer with sigmoid output (0 = good sentiment, and 1 = bad sentiment)
 
 The model is compiled with binary cross entropy and the Adam optimizer. 
 
