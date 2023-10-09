@@ -10,7 +10,7 @@ We'll consider the top 50000 words. (i.e. num_words = 5000)
 
 
 
-%------------------------------------ Goal of the project ---------------------------------------%
+%------------------------------------ Goal of the project -------------------------------%
 
 Create a Keras sequential model to create an LSTM model for predicting sentiment.
 
@@ -29,19 +29,25 @@ We train for 10 epochs and report the accuracy on the 'out of sample' test set.
 We also report a table of accuracies when we vary the vector length and the hidden states. 
 
 
-%------------------------------------ Required Packages --------------------------------------%
+%---------------------------------- Required Packages -----------------------------------%
 
 ```
-keras
+import keras
+from keras.datasets import imdb
+from keras.models import Sequential
+from keras.layers import Dense, Embedding, LSTM
+
+import numpy as np
 ```
 
 %------------------------------------ Results --------------------------------------%
+
 This dataset contains 25,000 movie reviews, labeled as either positive or negative. 
 In this model we considered the 5000 most used words, and chunks of 500 word strings, and used this to find long-term dependencies inside the strings of words.
 
 Using an embedding layer, then an LSTM layer (included in the Keras Sequential model package), and a final dense layer we found the following accuracies when we varied Hidden States and Vector Length:
 
-<img src="./accuracy-results.png" alt="accuracy-results" width="250"/>
+<img src="./accuracy-results.png" alt="accuracy-results" width="300"/>
 
 
 Thus, all the Accuracies of the vectors and hidden states were in the range 85.2% to 87.2%, which is fairly high and indicates this LSTM model did a good job discerning whether a string of words had a good or bad sentiment. 
