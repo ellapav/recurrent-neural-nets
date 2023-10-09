@@ -2,6 +2,7 @@ This dataset contains 25,000 movie reviews, labeled as either positive or negati
 In this model we considered the 5000 most used words, and chunks of 500 word strings, and used this to find long-term dependencies inside the strings of words.
 
 Using an embedding layer, then an LSTM layer (included in the Keras Sequential model package), and a final dense layer we found the following accuracies when we varied Hidden States and Vector Length:
+
 <img src="./accuracy-results.png" alt="accuracy-results" width="250"/>
 
 
